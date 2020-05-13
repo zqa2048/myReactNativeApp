@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b0db8ede-8c33-4374-ab4f-a6011c32bc24" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/myReactNative01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/imgs/logo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/home/TodoList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1b7i5IHIUvbcuBPNBB4cis4adDX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.last.introduce.type" value="VAR" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.ember-template-lint" value="true" />
+    <property name="node.js.path.for.package.ember-template-lint" value="project" />
+    <property name="node.js.selected.package.ember-template-lint" value="" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="E:\data\demo\myReactNative01\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\data\demo\myReactNative01\resource\imgs" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0db8ede-8c33-4374-ab4f-a6011c32bc24" name="Default Changelist" comment="" />
+      <created>1587989347242</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587989347242</updated>
+      <workItem from="1587989348550" duration="1011000" />
+      <workItem from="1587992639373" duration="301000" />
+      <workItem from="1587993013639" duration="3941000" />
+      <workItem from="1587997633087" duration="705000" />
+      <workItem from="1588817883899" duration="9910000" />
+      <workItem from="1588898724408" duration="11777000" />
+      <workItem from="1588991369634" duration="5816000" />
+      <workItem from="1589190988227" duration="5649000" />
+      <workItem from="1589268249449" duration="6465000" />
+      <workItem from="1589333777218" duration="6670000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1164" y="217" key="#Inspections" timestamp="1587996331081">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1164" y="217" key="#Inspections/0.0.1920.1040@0.0.1920.1040" timestamp="1587996331081" />
+    <state x="904" y="130" width="1016" height="909" key="#Intentions" timestamp="1587996513944">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="904" y="130" width="1016" height="909" key="#Intentions/0.0.1920.1040@0.0.1920.1040" timestamp="1587996513944" />
+    <state x="918" y="302" key="#Notifications" timestamp="1588908641211">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="918" y="302" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1588908641211" />
+    <state x="996" y="5" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1587996899245">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="996" y="5" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587996899245" />
+    <state x="808" y="227" key="FileChooserDialogImpl" timestamp="1589271441641">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="808" y="227" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589271441641" />
+    <state width="1313" height="323" key="GridCell.Tab.0.bottom" timestamp="1589273786411">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1313" height="323" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589273786411" />
+    <state width="1313" height="323" key="GridCell.Tab.0.center" timestamp="1589273786411">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1313" height="323" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589273786411" />
+    <state width="1313" height="323" key="GridCell.Tab.0.left" timestamp="1589273786410">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1313" height="323" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589273786410" />
+    <state width="1313" height="323" key="GridCell.Tab.0.right" timestamp="1589273786411">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1313" height="323" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589273786411" />
+    <state x="301" y="44" key="SettingsEditor" timestamp="1589268211595">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="301" y="44" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589268211595" />
+    <state width="750" height="540" key="javadoc.popup" timestamp="1587996823212">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="750" height="540" key="javadoc.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587996823212" />
+    <state x="620" y="245" key="run.anything.popup" timestamp="1588818573924">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="620" y="245" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588818573924" />
+    <state x="1443" y="5" width="840" height="1034" key="search.everywhere.popup" timestamp="1589338493641">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1443" y="5" width="840" height="1034" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589338493641" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="myReactNative01" type="b2602c69:ProjectViewProjectNode" />
+        <item name="myReactNative01" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
+</project>
