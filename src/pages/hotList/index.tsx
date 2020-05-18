@@ -12,7 +12,7 @@ import TodoList from "./TodoList";
 
 
 
-export default function Index() {
+export default function HotList() {
   const [data,setData] = useState<any>()
   const [inputValue,setInputValue] = useState<string>('')
 

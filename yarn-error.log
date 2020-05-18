@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: ENOENT: no such file or directory, copyfile 'C:\Users\周乾\AppData\Local\Yarn\Cache\v6\npm-pify-3.0.0-e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176-integrity\node_modules\pify\index.js' -> 'E:\data\demo\myReactNative01\node_modules\configstore\node_modules\pify\index.js'
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\周乾\AppData\Local\Yarn\Cache\v6\npm-ansi-regex-5.0.0-388539f55179bf39339c81af30a654d69f87cb75-integrity\node_modules\ansi-regex\index.d.ts' -> 'E:\data\demo\myReactNative01\node_modules\eslint\node_modules\ansi-regex\index.d.ts'
 
 npm manifest: 
   {
@@ -28,6 +28,7 @@ npm manifest:
       "react-devtools": "react-devtools"
     },
     "dependencies": {
+      "eslint": "^7.0.0",
       "expo": "~37.0.3",
       "react": "~16.9.0",
       "react-dom": "~16.9.0",
@@ -36,9 +37,11 @@ npm manifest:
       "react-native-web": "~0.11.7"
     },
     "devDependencies": {
+      "@ant-design/react-native": "^3.3.0",
       "@babel/core": "^7.8.6",
       "@types/react": "~16.9.23",
       "@types/react-native": "~0.61.17",
+      "babel-plugin-module-resolver": "^4.0.0",
       "babel-preset-expo": "~8.1.0",
       "dva": "^2.4.1",
       "dva-loading": "^3.0.20",

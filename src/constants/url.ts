@@ -1,0 +1,1 @@
+export const URL = {	index:'http://www.abc.com/api/mock/index.json',	hotlist:'http://www.abc.com/api/mock/hotlist.json',	categorylist:'http://www.abc.com/api/mock/categorylist.json?id='}
