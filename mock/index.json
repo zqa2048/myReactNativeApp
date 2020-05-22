@@ -49,43 +49,7 @@
         "id": "0012",
         "title": "蔬菜",
         "imgUrl": "http://cdn.u2.huluxia.com/g3/M02/26/87/wKgBOVwJCDKAKME6AAC7rd2ucLQ102.jpg"
-      },{
-      "id": "0013",
-      "title": "坚果",
-      "imgUrl": "http://cdn.u2.huluxia.com/g3/M03/27/D5/wKgBOVwJpRyAWwSwAAPMJ5yS6Gw893.jpg"
-    },{
-      "id": "0014",
-      "title": "油品",
-      "imgUrl": "http://cdn.u2.huluxia.com/g3/M01/26/8C/wKgBOVwJCXGAIPlmAAGfWsXcJs0776.jpg"
-    },{
-      "id": "0015",
-      "title": "调料",
-      "imgUrl": "http://cdn.u2.huluxia.com/g3/M02/29/BC/wKgBOVwKZb2AdcBRAAC9o183hME613.jpg"
-    },{
-      "id": "0016",
-      "title": "坚果",
-      "imgUrl": "http://cdn.u2.huluxia.com/g3/M03/27/D5/wKgBOVwJpRyAWwSwAAPMJ5yS6Gw893.jpg"
-    },{
-      "id": "0017",
-      "title": "油品",
-      "imgUrl": "http://cdn.u2.huluxia.com/g3/M01/26/8C/wKgBOVwJCXGAIPlmAAGfWsXcJs0776.jpg"
-    },{
-      "id": "0018",
-      "title": "调料",
-      "imgUrl": "http://cdn.u2.huluxia.com/g3/M02/29/BC/wKgBOVwKZb2AdcBRAAC9o183hME613.jpg"
-    },{
-      "id": "00019",
-      "title": "坚果",
-      "imgUrl": "http://cdn.u2.huluxia.com/g3/M03/27/D5/wKgBOVwJpRyAWwSwAAPMJ5yS6Gw893.jpg"
-    },{
-      "id": "0020",
-      "title": "油品",
-      "imgUrl": "http://cdn.u2.huluxia.com/g3/M01/26/8C/wKgBOVwJCXGAIPlmAAGfWsXcJs0776.jpg"
-    },{
-      "id": "0021",
-      "title": "调料",
-      "imgUrl": "http://cdn.u2.huluxia.com/g3/M02/29/BC/wKgBOVwKZb2AdcBRAAC9o183hME613.jpg"
-    }
+      }
     ]
   }
 }

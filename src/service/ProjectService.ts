@@ -1,0 +1,1 @@
+import { MockUrl } from "../constants/url";export const holeList = async()=>{	try{		let response= await fetch(MockUrl.index)		let data = response.json()		return data	} catch(e) {		return console.log('请求错误！')	}}

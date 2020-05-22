@@ -1,0 +1,1 @@
+import count from "./count";import wiki from "./wiki";export default [wiki,count]
