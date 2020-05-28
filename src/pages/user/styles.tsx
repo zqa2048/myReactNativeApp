@@ -1,0 +1,1 @@
+import { StyleSheet } from "react-native";export default StyleSheet.create({	wrapper: {		display:'flex',		flexDirection: 'row',		paddingLeft: 10,		paddingTop: 10	},	title: {		height: 30,		lineHeight: 30,		marginRight: 10	}})

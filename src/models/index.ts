@@ -1,1 +1,1 @@
-import count from "./count";import list from "./list";import wiki from "./wiki";export default [wiki,list,count]
+import home from "./home";import count from "./count";import list from "./list";import wiki from "./wiki";export default [wiki,list,count,home]
