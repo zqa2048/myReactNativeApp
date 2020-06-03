@@ -1,1 +1,99 @@
-import { TabBar } from "@ant-design/react-native";import { AntDesign, FontAwesome5 } from "@expo/vector-icons";import { useNavigation } from "@react-navigation/native";import React, { useState, useEffect } from "react";import { AsyncStorage, Text, View } from "react-native";import { useDispatch, useSelector } from "react-redux";import User from "../user/";import List from "../list/List";import MyMap from "../myMap/MyMap";import Wiki from "../wiki/View";export default function Home() {	const [selected,setSelected] = useState('selectedHome')	const [selectedMap,setSelectedMap] = useState<JSX.Element>(<Text/>)	const navigation = useNavigation()	navigation.setOptions({title:'',headerStyle:{height:0}})	// @ts-ignore	const home = useSelector(({home}) => home)	const dispatch = useDispatch()			const onTabChange = (value:boolean) => {		dispatch({			type: 'home/changeNear',			payload:{				type: 'change',				value:value			}		})	}	const fn = () => {		AsyncStorage.getItem('nearSwitch',(err,value)=>{			if(value === 'true'){				return onTabChange(true)			}else{				return onTabChange(false)			}		})	}	useEffect(()=>{		fn()	},[])		useEffect(()=>{		if(home.nearSwitch){			setSelectedMap(<TabBar.Item				title='附近美食'				selected={selected === "selectedMap"}				onPress={() => {					setSelected("selectedMap");					console.log('2222222222')				}}				key={2}				icon={<AntDesign name='customerservice' size={24} color="#F6CED8" />}			>				<MyMap/>			</TabBar.Item>)		}else{			setSelectedMap(<Text/>)		}	},[home.nearSwitch,selected])			return (		// <Provider>			<TabBar>				<TabBar.Item					title='美食大全'					selected={selected === 'selectedHome'}					onPress={()=>setSelected('selectedHome')}					key={1}					icon={<AntDesign name="home" size={24} color="#E1F5A9" />}				>					<Wiki />				</TabBar.Item>				<TabBar.Item					title='热门列表'					selected={selected === 'selectedFind'}					onPress={()=>setSelected('selectedFind')}					key={2}					icon={<FontAwesome5 name="fire-alt" size={24} color="#FE2E2A" />}				>					<List/>				</TabBar.Item>								{ selectedMap }								<TabBar.Item					title='个人中心'					selected={selected === 'selectedUser'}					onPress={()=>setSelected('selectedUser')}					key={3}					icon={<AntDesign name="user" size={24} color='skyblue' />}					badge={1}				>				<User/>				</TabBar.Item>			</TabBar>		// </Provider>	)}
+import { TabBar, Provider } from "@ant-design/react-native";
+import { Ionicons, Entypo, AntDesign, FontAwesome5 } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import React, { useState, useEffect } from "react";
+import { AsyncStorage, Text, View, StatusBar } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
+import Delete from "../delete";
+import Succ from "../succress";
+import Todo from "../todo";
+import { XStorage } from "react-native-easy-app";
+import { RNStorage } from "../../constants/easyApp";
+
+export default function Home() {
+	const [ selected, setSelected ] = useState("selectedList");
+	const [ selectedMap, setSelectedMap ] = useState<JSX.Element>(<Text />);
+	const navigation = useNavigation();
+	navigation.setOptions({ title: "", headerStyle: { height: 0 } });
+	// @ts-ignore
+	const home = useSelector(({ home }) => home);
+	const dispatch = useDispatch();
+
+	const onTabChange = (value: boolean) => {
+		dispatch({
+			type: "home/changeNear",
+			payload: {
+				type: "change",
+				value: value,
+			},
+		});
+	};
+
+	const saveAll = (e: any) => {
+		dispatch({
+			type: "list/saveAll",
+			payload: {
+				todolist: e.TodoList,
+				dellist: e.DelList,
+				succlist: e.SuccList,
+			},
+		});
+	};
+	const fn = () => {
+		// console.log('saveAll RNStorage.TodoList:',RNStorage)
+		if (RNStorage.TodoList || RNStorage.DelList || RNStorage.SuccList) {
+			console.log("saveAll RNStorage.TodoList:", RNStorage);
+			saveAll(RNStorage);
+		}
+	};
+
+	useEffect(() => {
+		XStorage.initStorage(
+			RNStorage,
+			() => {
+				// 初始化自定义数据管理器
+				fn();
+				console.log("RNStorage999999999999", JSON.stringify(RNStorage)); // 打印数据管理器的内容
+			},
+			(data) => {
+				console.log("持久化数据变化", data);
+			},
+			"1.0",
+			AsyncStorage,
+		);
+	}, []);
+
+	return (
+		<Provider>
+			<TabBar>
+				<StatusBar barStyle="light-content" />
+				<TabBar.Item
+					title="未完成"
+					selected={selected === "selectedList"}
+					onPress={() => setSelected("selectedList")}
+					key={1}
+					icon={<Entypo name="list" size={24} color="black" />}>
+					<Todo />
+				</TabBar.Item>
+				<TabBar.Item
+					title="已完成"
+					selected={selected === "selectedSucc"}
+					onPress={() => setSelected("selectedSucc")}
+					key={2}
+					icon={<Ionicons name="md-checkmark" size={24} color="black" />}>
+					<Succ />
+				</TabBar.Item>
+
+				<TabBar.Item
+					title="已删除"
+					selected={selected === "selectedDel"}
+					onPress={() => setSelected("selectedDel")}
+					key={3}
+					icon={<AntDesign name="delete" size={24} color="black" />}
+					badge={1}>
+					<Delete />
+				</TabBar.Item>
+			</TabBar>
+		</Provider>
+	);
+}

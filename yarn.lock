@@ -6931,6 +6931,11 @@ react-native-device-info@^0.10.2:
   resolved "https://registry.npm.taobao.org/react-native-device-info/download/react-native-device-info-0.10.2.tgz#350cd68ed43839022ddea0a3a423439f16fa4fba"
   integrity sha1-NQzWjtQ4OQIt3qCjpCNDnxb6T7o=
 
+react-native-easy-app@^1.6.12:
+  version "1.6.12"
+  resolved "https://registry.npm.taobao.org/react-native-easy-app/download/react-native-easy-app-1.6.12.tgz#2478999dbbfd20f41a43fa362d11dfc8f7d5f6ba"
+  integrity sha1-JHiZnbv9IPQaQ/o2LRHfyPfV9ro=
+
 react-native-gesture-handler@~1.6.0:
   version "1.6.1"
   resolved "https://registry.npm.taobao.org/react-native-gesture-handler/download/react-native-gesture-handler-1.6.1.tgz#678e2dce250ed66e93af409759be22cd6375dd17"

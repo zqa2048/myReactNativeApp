@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0db8ede-8c33-4374-ab4f-a6011c32bc24" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/apple-tree.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/apple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icons64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/splash1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/myMap/MyMap.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/myMap/MyMap.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/wiki/View.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/todo/View.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/wiki/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/todo/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Home.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +42,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="VAR" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.ember-template-lint" value="true" />
     <property name="node.js.path.for.package.ember-template-lint" value="project" />
     <property name="node.js.selected.package.ember-template-lint" value="" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
-    <property name="ts.external.directory.path" value="E:\data\demo\myReactNative01\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -113,7 +111,8 @@
       <workItem from="1590118302462" duration="8397000" />
       <workItem from="1590129743388" duration="22342000" />
       <workItem from="1590498002050" duration="21959000" />
-      <workItem from="1590627070535" duration="5036000" />
+      <workItem from="1590627070535" duration="5711000" />
+      <workItem from="1591094904093" duration="1775000" />
     </task>
     <task id="LOCAL-00001" summary="home dva">
       <created>1590134142512</created>
