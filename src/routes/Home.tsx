@@ -14,6 +14,8 @@ export default class App extends React.Component {
 		currentTheme: null,
 		isReady: false,
 	};
+
+	//确保antd-rn的字体图标加载完成
 	async componentDidMount () {
 		await Font.loadAsync(
 			'antoutline',

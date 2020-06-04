@@ -1,32 +1,38 @@
-// export { default} from "./src/pages/home"
-import { useNavigation } from "@react-navigation/native";
-import React, { useEffect, useState } from "react";
-import { FlatList, Text, TextInput, TouchableOpacity, View, Modal } from "react-native";
+import React from "react";
+import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./styles";
-import { Ionicons, AntDesign } from "@expo/vector-icons";
-import { Button, Checkbox, WingBlank } from "@ant-design/react-native";
-import { RNStorage } from "../../constants/easyApp";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
+import { Modal } from "@ant-design/react-native";
 
 export default function Todo() {
 	const dispatch = useDispatch();
 	const list = useSelector((state) => state.list);
-	const navigation = useNavigation();
 
-  const Delete = (index:number) => {
-    dispatch({
-      type: 'list/changeList',
-      payload: {
-        index: index,
-        type:'dellist/TO'
-      }
-  })
-}
+	const DeleteList = () => {
+		dispatch({
+			type: "list/saveOther",
+			payload: {
+				type: "dellist",
+				value: [],
+			},
+		});
+	};
+
+	const onDelClick = () => {
+		Modal.alert("提示", "请确认清除Todo!", [
+			{
+				text: "Cancel",
+				onPress: () => {},
+				style: "cancel",
+			},
+			{ text: "OK", onPress: () => DeleteList() },
+		]);
+	};
 
 	return (
-    <View style={styles.container}>
-      
-      <View
+		<View style={styles.container}>
+			<View
 				style={{
 					display: "flex",
 					flexDirection: "row",
@@ -43,9 +49,10 @@ export default function Todo() {
 				<TouchableOpacity
 					activeOpacity={0.5}
 					onPress={() => {
+						onDelClick();
 					}}>
 					<Text>
-						
+						<MaterialIcons name="clear" size={24} color="red" />
 					</Text>
 				</TouchableOpacity>
 			</View>
@@ -63,7 +70,7 @@ export default function Todo() {
 								{
 									width: "90%",
 									minHeight: 50,
-									maxHeight:100,
+									maxHeight: 100,
 									marginTop: 8,
 									marginLeft: 10,
 									marginRight: 10,
@@ -72,16 +79,13 @@ export default function Todo() {
 									borderWidth: 1,
 								},
 							]}>
-							<View style={{display:"flex",flexDirection:"row"}}>
+							<View style={{ display: "flex", flexDirection: "row" }}>
 								<Text style={styles.itemTitle}>{item}</Text>
 							</View>
 						</TouchableOpacity>
 					);
 				}}
 			/>
-
-			
-	
 		</View>
 	);
 }

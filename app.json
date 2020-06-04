@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "food",
+    "name": "todoList",
     "slug": "food",
     "platforms": [
       "ios",
@@ -11,9 +11,9 @@
     "orientation": "portrait",
     "icon": "./assets/icons64.png",
     "splash": {
-      "image": "./assets/apple.png",
-      "resizeMode": "cover",
-      "backgroundColor": "#000000"
+      "image": "./assets/splash.png",
+      
+      "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

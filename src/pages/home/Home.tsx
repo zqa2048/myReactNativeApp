@@ -16,7 +16,7 @@ export default function Home() {
 	const navigation = useNavigation();
 	navigation.setOptions({ title: "", headerStyle: { height: 0 } });
 	// @ts-ignore
-	const home = useSelector(({ home }) => home);
+	const list = useSelector(({ list }) => list);
 	const dispatch = useDispatch();
 
 	const onTabChange = (value: boolean) => {
@@ -72,7 +72,10 @@ export default function Home() {
 					selected={selected === "selectedList"}
 					onPress={() => setSelected("selectedList")}
 					key={1}
-					icon={<Entypo name="list" size={24} color="black" />}>
+					icon={<Entypo name="list" size={24} color="black" />}
+					badge={list.todolist.length}
+					selectedIcon={<Entypo name="list" size={24} color="#FA58AC" />}
+				>
 					<Todo />
 				</TabBar.Item>
 				<TabBar.Item
@@ -80,7 +83,9 @@ export default function Home() {
 					selected={selected === "selectedSucc"}
 					onPress={() => setSelected("selectedSucc")}
 					key={2}
-					icon={<Ionicons name="md-checkmark" size={24} color="black" />}>
+					icon={<Ionicons name="md-checkmark" size={24} color="black" />}
+					selectedIcon={<Ionicons name="md-checkmark" size={24} color="#81DAF5" />}
+				>
 					<Succ />
 				</TabBar.Item>
 
@@ -90,7 +95,8 @@ export default function Home() {
 					onPress={() => setSelected("selectedDel")}
 					key={3}
 					icon={<AntDesign name="delete" size={24} color="black" />}
-					badge={1}>
+					selectedIcon={<AntDesign name="delete" size={24} color="#F7D358" />}
+					>
 					<Delete />
 				</TabBar.Item>
 			</TabBar>

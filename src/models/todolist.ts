@@ -41,6 +41,7 @@ const todolist: IListModelsType = {
       return { ...state, todolist: todo };
     },
 
+    // 将本地持久化的数据全部保存到状态
     saveAll(state, { payload }) {
       const data = {
         todolist: payload.todolist,
@@ -50,6 +51,7 @@ const todolist: IListModelsType = {
       return { ...data };
     },
 
+    // 根据传递的type，操作对应的list
     saveOther(state, { payload }) {
       const list = payload.value;
       switch (payload.type) {
@@ -76,25 +78,26 @@ const todolist: IListModelsType = {
 
     *changeList({ payload }, { call, put, select }) {
       const list = yield select(state => state.list);
+
+      //声明变量，保存list
       let succlist: any[] = [];
       succlist = succlist.concat(list.succlist);
       let todolist: any[] = [];
       todolist = todolist.concat(list.todolist);
       let dellist: any[] = [];
       dellist = dellist.concat(list.dellist);
-console.log('payload :>> ', payload);
-      console.log("lists", list);
+
+      //根据传递进来的payload.type，对各个list进行修改
       if (payload.type === "change") {
         RNStorage.TodoList = list.todolist;
       } else if (payload.type === "delete/TO") {
-        console.log("delete/TO");
-
+        //有值往里面追加
         if (list.dellist) {
-          console.log("list.succlist :>> ", list.succlist);
           dellist.push(list.todolist[payload.index]);
         } else {
           dellist[0] = list.todolist[payload.index];
         }
+        //更新保存到状态和本地持久化
         yield put({
           type: "saveOther",
           payload: {
@@ -102,8 +105,8 @@ console.log('payload :>> ', payload);
             value: dellist
           }
         });
+        //更新保存到状态和本地持久化
         todolist = todolist.filter((item, index) => index != payload.index);
-        console.log("todolist :>> ", todolist);
         yield put({
           type: "saveOther",
           payload: {
@@ -111,11 +114,8 @@ console.log('payload :>> ', payload);
             value: todolist
           }
         });
-      }else if (payload.type === "delete/SU") {
-        console.log("delete/SU");
-
+      } else if (payload.type === "delete/SU") {
         if (list.dellist) {
-          console.log("list.succlist :>> ", list.succlist);
           dellist.push(list.succlist[payload.index]);
         } else {
           dellist[0] = list.succlist[payload.index];
@@ -128,7 +128,6 @@ console.log('payload :>> ', payload);
           }
         });
         succlist = succlist.filter((item, index) => index != payload.index);
-        console.log("succlist :>> ", succlist);
         yield put({
           type: "saveOther",
           payload: {
@@ -137,9 +136,7 @@ console.log('payload :>> ', payload);
           }
         });
       } else if (payload.type === "succress") {
-        console.log("succlist:", succlist);
         if (list.succlist) {
-          console.log("list.succlist :>> ", list.succlist);
           succlist.push(list.todolist[payload.index]);
         } else {
           succlist[0] = list.todolist[payload.index];
@@ -152,7 +149,6 @@ console.log('payload :>> ', payload);
           }
         });
         todolist = todolist.filter((item, index) => index != payload.index);
-        console.log("todolist :>> ", todolist);
         yield put({
           type: "saveOther",
           payload: {
@@ -160,8 +156,6 @@ console.log('payload :>> ', payload);
             value: todolist
           }
         });
-
-        console.log("succress");
       } else {
         console.log("other");
       }

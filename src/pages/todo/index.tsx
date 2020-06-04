@@ -1,31 +1,26 @@
-// export { default} from "./src/pages/home"
-import { useNavigation } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
-import { FlatList, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./styles";
-import { Ionicons, AntDesign } from "@expo/vector-icons";
-import { Button, Checkbox, WingBlank, Modal, Toast } from "@ant-design/react-native";
-import { RNStorage } from "../../constants/easyApp";
+import { AntDesign } from "@expo/vector-icons";
+import { Button, Checkbox, WingBlank, Modal, Toast, TextareaItem } from "@ant-design/react-native";
+
 
 export default function Todo() {
 	const dispatch = useDispatch();
 	const list = useSelector((state) => state.list);
-	const navigation = useNavigation();
 
 	const [ visible, setVisible ] = useState<boolean>(false);
-	const [ input, setInput ] = useState<string>("");
-	const [ checkBox, setCheckBox ] = useState<boolean>(false);
+	const [ input, setInput ] = useState<string|undefined>("");
 
 	//编辑后保存按钮
-	const save = (e: string) => {
-		console.log("e:", e);
+	const save = (e: string|undefined) => {
 		if (e) {
 			saveList(e);
 			setInput("");
-			Toast.info('保存成功', 2)
+			Toast.info("保存成功", 2);
 		} else {
-			Toast.info('保存失败，输入为空！', 2)
+			Toast.info("保存失败，输入为空！", 2);
 		}
 	};
 
@@ -77,13 +72,14 @@ export default function Todo() {
 		Modal.alert("提示", "请确认完成Todo!", [
 			{
 				text: "Cancel",
-				onPress: () => {setCheckBox(false)},
+				onPress: () => {},
 				style: "cancel",
 			},
 			{ text: "OK", onPress: () => SuccList(index) },
 		]);
 	};
 
+	//点击删除按钮
 	const onDelClick = (index: number) => {
 		Modal.alert("提示", "请确认删除Todo!", [
 			{
@@ -99,7 +95,6 @@ export default function Todo() {
 		() => {
 			const fn = () => {
 				if (list.todolist.length) {
-					console.log("list333:", list);
 					changeList();
 				}
 			};
@@ -187,28 +182,34 @@ export default function Todo() {
 					onClose={() => {
 						setVisible(false);
 					}}>
-					<View style={{ marginTop: 22, height: "100%" }}>
+					<View style={{ marginTop: 15, height: "100%" }}>
 						<View>
-							<Text>请输入待办事项</Text>
-							<TextInput
+							<Text
+								style={{
+									fontSize: 18,
+									textAlign: "center",
+								}}>
+								添加事项
+							</Text>
+							<TextareaItem
+								value={input}
+								placeholder="请输入代办事项"
+								clear
+								rows={10}
+								count={200}
+								labelNumber={7}
+								onChange={(e) => setInput(e)}
 								style={{
 									textAlignVertical: "top",
 									borderTopColor: "red",
 									borderBottomColor: "red",
 									borderTopWidth: 0.7,
 									borderBottomWidth: 0.7,
-									marginBottom: 10,
+									// marginBottom: 10,
 									marginTop: 10,
 								}}
-								maxLength={500}
-								multiline
-								numberOfLines={20}
-								onBlur={(e) => console.log(e)}
-								placeholder="请输入待办事项"
-								value={input}
-								onChangeText={(e) => setInput(e)}
 							/>
-							<View style={{ display: "flex", flexDirection: "row", justifyContent: "space-around" }}>
+							<View style={{ display: "flex", flexDirection: "row", justifyContent: "space-around", marginTop: 10 }}>
 								<Button
 									size="large"
 									style={{ width: 100 }}
